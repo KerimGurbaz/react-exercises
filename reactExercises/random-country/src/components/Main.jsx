@@ -1,21 +1,20 @@
-import { useEffect, useState } from "react";
-import React from "react";
+import React, { useEffect, useState } from "react";
 import axios from "axios";
 import Card from "./Card";
 
-
-
 const Main = () => {
-    const [res, setRes] = useState("");
-
-    const url = "https://restcountries.com/v3.1/all";
-
+  const [country, setCountry] = useState([]);
+  useEffect(() => {
+    axios.get(`https://restcountries.com/v3.1/all`).then((res) => {
+      setCountry(res.data[0]);
+    });
+  }, []);
 
   return (
     <div>
-      
+      <Card props={country} />
     </div>
-  )
-}
+  );
+};
 
-export default Main
+export default Main;
