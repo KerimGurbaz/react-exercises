@@ -7,6 +7,17 @@
   pointer-events: none;
 }
 
+.country-div {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+.img {
+  padding: 1rem;
+  font-size: 10rem;
+}
+
 @media (prefers-reduced-motion: no-preference) {
   .App-logo {
     animation: App-logo-spin infinite 20s linear;
