@@ -25,7 +25,13 @@ export default function CardGrid() {
       >
         Card & Grid
       </Typography>
-      <Grid container spacing={2} mt={2}>
+      <Grid
+        container
+        spacing={2}
+        mt={2}
+        justifyContent="center"
+        alignItems="center"
+      >
         {data.map((card) => {
           const { id, name, text, img } = card;
           return (
